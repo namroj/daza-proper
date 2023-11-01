@@ -1,1 +1,2 @@
-# daza-proper
+# Proper
+## Landing | DAZA
