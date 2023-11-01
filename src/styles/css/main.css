@@ -1,4 +1,63 @@
+/* CSS */
 @import '../css/ie10-viewport-bug-workaround.css';
 @import '../css/normalize.css';
 @import '../css/bootstrap.min.css';
-@import '../css/animate.css';/*# sourceMappingURL=main.css.map */
+@import '../css/animate.css';
+/* FONTS */
+@font-face {
+  font-family: "Acherus Grotesque";
+  src: url("../../assets/fonts/AcherusGrotesque-Regular.eot");
+  src: url("../../assets/fonts/AcherusGrotesque-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/AcherusGrotesque-Regular.svg#AcherusGrotesque-Regular") format("svg"), url("../../assets/fonts/AcherusGrotesque-Regular.ttf") format("truetype"), url("../../assets/fonts/AcherusGrotesque-Regular.woff") format("woff"), url("../../assets/fonts/AcherusGrotesque-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "";
+  src: url("../../assets/fonts/.eot");
+  src: url("../../assets/fonts/.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/.svg#") format("svg"), url("../../assets/fonts/.ttf") format("truetype"), url("../../assets/fonts/.woff") format("woff"), url("../../assets/fonts/.woff2") format("woff2");
+  text-rendering: optimizeLegibility;
+}
+/* GLOBALS */
+* {
+  font-family: "Acherus Grotesque";
+}
+
+a {
+  color: #EFEDEC;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #EFEDEC;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1B4136;
+  color: #EFEDEC;
+  padding: 70px 0 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .logo {
+  background-image: url(../../../src/assets/icons/logo.svg);
+  background-size: cover;
+  width: 215px;
+  height: 65px;
+  display: block;
+  margin: 0 auto 70px;
+}
+footer a.address {
+  display: block;
+  text-align: center;
+}
+footer a.ig > img {
+  display: block;
+  margin: 30px auto 60px;
+}
+footer .copyrights {
+  font-size: 0.7rem;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */
