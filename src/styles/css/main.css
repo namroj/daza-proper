@@ -39,6 +39,12 @@ a:hover, a:focus {
   background-size: contain;
   background-repeat: no-repeat;
 }
+@media (min-width: 768px) {
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 /* TODO remove until header is done */
 h1 {
@@ -49,29 +55,67 @@ h1 {
 section#contact {
   padding: 70px 0;
 }
-section#contact h2 {
+@media (min-width: 768px) {
+  section#contact {
+    padding: 0;
+  }
+}
+section#contact img {
+  margin: 0 auto;
+}
+section#contact .info {
+  height: 100%;
+}
+@media (min-width: 768px) {
+  section#contact .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+  }
+}
+section#contact .info h2 {
   color: #1B4136;
   font-size: 0.9rem;
   text-align: center;
   margin-bottom: 35px;
 }
-section#contact a {
+@media (min-width: 768px) {
+  section#contact .info h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 60px;
+  }
+}
+section#contact .info a {
   display: block;
   text-align: center;
   font-size: 1.3rem;
 }
-section#contact .rrhh {
+@media (min-width: 768px) {
+  section#contact .info a {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+section#contact .info .rrhh {
   display: flex;
   justify-content: center;
   margin: 35px auto 0;
 }
-section#contact .rrhh a:first-of-type {
+@media (min-width: 768px) {
+  section#contact .info .rrhh {
+    margin: 60px 0 0;
+    justify-content: start;
+  }
+}
+section#contact .info .rrhh a:first-of-type {
   margin-right: 18px;
 }
-section#contact .rrhh a.ig {
+section#contact .info .rrhh a.ig {
   background-image: url(../../../src/assets/icons/icon-ig.svg);
 }
-section#contact .rrhh a.ln {
+section#contact .info .rrhh a.ln {
   background-image: url(../../../src/assets/icons/icon-ln.svg);
 }
 
@@ -87,7 +131,7 @@ footer {
 @media (min-width: 768px) {
   footer {
     flex-direction: row;
-    padding: 60px 60px 30px;
+    padding: 60px 45px 30px;
   }
 }
 @media (min-width: 994px) {
