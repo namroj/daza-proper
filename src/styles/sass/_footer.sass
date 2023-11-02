@@ -7,22 +7,67 @@ footer
   flex-direction: column
   justify-content: space-between
 
+  +md
+    flex-direction: row
+    padding: 60px 60px 30px
+
+  +lg
+    padding: 70px
+
   .logo
     background-image: url(../../../src/assets/icons/logo.svg)
-    background-size: cover
-    width: 215px
-    height: 65px
+    background-size: contain
+    background-repeat: no-repeat
+    width: 246px
+    height: 74px
     display: block
     margin: 0 auto 70px
 
-  a.address
+    +md
+      width: 210px
+      margin: 0
+
+    +lg
+      width: 346px
+      height: 104px
+
+  .info
+
+    +md
+      display: flex
+      justify-content: center
+
+    a.address
+      display: block
+      text-align: center
+
+      +md
+        text-align: left
+        margin-right: 45px
+
+      +lg
+        font-size: 1.2rem
+        margin-right: 70px
+
+  a.ig
+    background-image: url(../../../src/assets/icons/icon-ig.svg)
+    background-size: contain
+    background-repeat: no-repeat
+    width: 26px
+    height: 26px
     display: block
+    margin: 35px auto 70px
+
+    +md
+      margin: 0
+
+  p.copyrights
+    font-size: .8rem
     text-align: center
 
-  a.ig > img
-    display: block
-    margin: 30px auto 60px
+    +md
+      margin-top: 70px
+      text-align: right
 
-  .copyrights
-    font-size: .7rem
-    text-align: center
+    +lg
+      font-size: 1rem

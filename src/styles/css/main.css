@@ -41,23 +41,86 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 }
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    padding: 60px 60px 30px;
+  }
+}
+@media (min-width: 994px) {
+  footer {
+    padding: 70px;
+  }
+}
 footer .logo {
   background-image: url(../../../src/assets/icons/logo.svg);
-  background-size: cover;
-  width: 215px;
-  height: 65px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 246px;
+  height: 74px;
   display: block;
   margin: 0 auto 70px;
 }
-footer a.address {
+@media (min-width: 768px) {
+  footer .logo {
+    width: 210px;
+    margin: 0;
+  }
+}
+@media (min-width: 994px) {
+  footer .logo {
+    width: 346px;
+    height: 104px;
+  }
+}
+@media (min-width: 768px) {
+  footer .info {
+    display: flex;
+    justify-content: center;
+  }
+}
+footer .info a.address {
   display: block;
   text-align: center;
 }
-footer a.ig > img {
-  display: block;
-  margin: 30px auto 60px;
+@media (min-width: 768px) {
+  footer .info a.address {
+    text-align: left;
+    margin-right: 45px;
+  }
 }
-footer .copyrights {
-  font-size: 0.7rem;
+@media (min-width: 994px) {
+  footer .info a.address {
+    font-size: 1.2rem;
+    margin-right: 70px;
+  }
+}
+footer a.ig {
+  background-image: url(../../../src/assets/icons/icon-ig.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  display: block;
+  margin: 35px auto 70px;
+}
+@media (min-width: 768px) {
+  footer a.ig {
+    margin: 0;
+  }
+}
+footer p.copyrights {
+  font-size: 0.8rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  footer p.copyrights {
+    margin-top: 70px;
+    text-align: right;
+  }
+}
+@media (min-width: 994px) {
+  footer p.copyrights {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

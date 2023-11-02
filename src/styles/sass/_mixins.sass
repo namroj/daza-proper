@@ -1,8 +1,10 @@
 $md: 768
-$lg: 1024
+$lg: 994
 
-=tablet
-  @media (max-width: #{$md}px)
+=md
+  @media (min-width: #{$md}px)
+    @content
 
-=desktop
-  @media (max-width: #{$lg}px)
+=lg
+  @media (min-width: #{$lg}px)
+    @content
