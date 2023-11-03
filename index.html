@@ -20,7 +20,21 @@
   <h1>Proper</h1>
 
   <section id="contact">
-    <div class="container-xl">
+    <div class="container-fluid" id="form">
+      <h2>Escribinos</h2>
+      <form>
+        <div class="full-name">
+          <input type="text" name="first-name" placeholder="Nombre" class="md-6" />
+          <input type="text" name="last-name" placeholder="Apellido" class="md-6" />
+        </div>
+        <input type="email" name="email" placeholder="Email" />
+        <input type="tel" name="phone" placeholder="Teléfono" />
+        <textarea name="query" rows="12" placeholder="Consulta"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="container-xl" id="data">
       <div class="row">
         <div class="col-md-6 d-none d-md-block">
           <img src="./src/assets/images/img-contact.jpg" class="img-fluid"
