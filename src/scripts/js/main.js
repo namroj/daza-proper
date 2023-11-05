@@ -1,3 +1,9 @@
+import './ie10-viewport-bug-workaround.js';
+import './jquery.min.js';
+import './wow.min.js';
+import './scrollTo.min.js';
+import './slick.min.js';
+
 const getCurrentYear = () => new Date().getFullYear()
 
 $(function () {
