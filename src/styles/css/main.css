@@ -26,6 +26,10 @@
   font-size: 1rem;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   color: #000000;
   text-decoration: none;
