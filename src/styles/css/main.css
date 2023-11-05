@@ -30,7 +30,7 @@ a {
   color: #000000;
   text-decoration: none;
 }
-a:hover, a:focus {
+a:hover, a:focus, a:visited {
   color: #000000;
   text-decoration: none;
 }
@@ -49,8 +49,9 @@ a:hover, a:focus {
   }
 }
 
-button {
-  display: block;
+button,
+.btn {
+  display: inline-block;
   background-color: #1B4136;
   color: #EFEDEC;
   padding: 6px 60px 10px;
@@ -62,6 +63,81 @@ button {
 /* TODO remove until header is done */
 h1 {
   display: none;
+}
+
+/* AMENITIES */
+section#amenities #daza {
+  padding: 70px 0;
+}
+@media (min-width: 768px) {
+  section#amenities #daza {
+    padding: 105px 0;
+  }
+}
+@media (min-width: 994px) {
+  section#amenities #daza {
+    padding: 140px 0;
+  }
+}
+@media (min-width: 768px) {
+  section#amenities #daza .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+section#amenities #daza .brand a.logo {
+  background-image: url(../../../src/assets/icons/daza-logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 200px;
+  height: 53px;
+  margin: 0 auto 35px;
+}
+@media (min-width: 768px) {
+  section#amenities #daza .brand a.logo {
+    width: 300px;
+    height: 80px;
+  }
+}
+@media (min-width: 994px) {
+  section#amenities #daza .brand a.logo {
+    width: 400px;
+    height: 105px;
+  }
+}
+section#amenities #daza .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  section#amenities #daza .info {
+    justify-content: start;
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+@media (min-width: 768px) {
+  section#amenities #daza .info a {
+    margin: 0 auto 0 0;
+  }
+}
+section#amenities #daza .info a:hover, section#amenities #daza .info a:focus, section#amenities #daza .info a:visited {
+  color: #EFEDEC;
+  text-decoration: none;
+}
+section#amenities #daza .info p {
+  font-family: "Recoleta";
+  font-size: 2rem;
+  margin-bottom: 35px;
+}
+@media (min-width: 994px) {
+  section#amenities #daza .info p {
+    font-size: 2.2rem;
+  }
 }
 
 /* CONTACT */
@@ -260,7 +336,7 @@ footer .info a.address {
   text-align: center;
   color: #EFEDEC;
 }
-footer .info a.address:hover, footer .info a.address:focus {
+footer .info a.address:hover, footer .info a.address:focus, footer .info a.address:visited {
   color: #EFEDEC;
   text-decoration: none;
 }
