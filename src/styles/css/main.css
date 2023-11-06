@@ -153,62 +153,62 @@ section#contact #data {
     padding: 0;
   }
 }
-section#contact img {
+section#contact #data img {
   margin: 0 auto;
 }
-section#contact .info {
+section#contact #data .info {
   height: 100%;
 }
 @media (min-width: 768px) {
-  section#contact .info {
+  section#contact #data .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 60px;
   }
 }
-section#contact .info h2 {
+section#contact #data .info h2 {
   color: #1B4136;
   font-size: 0.9rem;
   text-align: center;
   margin-bottom: 35px;
 }
 @media (min-width: 768px) {
-  section#contact .info h2 {
+  section#contact #data .info h2 {
     font-size: 1.2rem;
     text-align: left;
     margin-bottom: 60px;
   }
 }
-section#contact .info a {
+section#contact #data .info a {
   display: block;
   text-align: center;
   font-size: 1.3rem;
 }
 @media (min-width: 768px) {
-  section#contact .info a {
+  section#contact #data .info a {
     font-size: 1.5rem;
     text-align: left;
   }
 }
-section#contact .info .rrhh {
+section#contact #data .info .rrhh {
   display: flex;
   justify-content: center;
   margin: 35px auto 0;
 }
 @media (min-width: 768px) {
-  section#contact .info .rrhh {
+  section#contact #data .info .rrhh {
     margin: 60px 0 0;
     justify-content: start;
   }
 }
-section#contact .info .rrhh a:first-of-type {
+section#contact #data .info .rrhh a:first-of-type {
   margin-right: 18px;
 }
-section#contact .info .rrhh a.ig {
+section#contact #data .info .rrhh a.ig {
   background-image: url(../../../src/assets/icons/icon-ig.svg);
 }
-section#contact .info .rrhh a.ln {
+section#contact #data .info .rrhh a.ln {
   background-image: url(../../../src/assets/icons/icon-ln.svg);
 }
 
