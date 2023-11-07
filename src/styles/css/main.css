@@ -153,6 +153,11 @@ section#contact #data {
     padding: 0;
   }
 }
+@media (min-width: 994px) {
+  section#contact #data {
+    padding: 60px 0;
+  }
+}
 section#contact #data img {
   margin: 0 auto;
 }
@@ -216,6 +221,11 @@ section#contact #data .info .rrhh a.ln {
 #form {
   background-color: #EFEDEC;
   padding: 70px 45px;
+}
+@media (min-width: 994px) {
+  #form {
+    padding: 120px 45px;
+  }
 }
 #form h2 {
   font-family: "Recoleta";
@@ -305,7 +315,7 @@ footer {
 }
 @media (min-width: 994px) {
   footer {
-    padding: 70px;
+    padding: 120px 70px 110px;
   }
 }
 footer .logo {
