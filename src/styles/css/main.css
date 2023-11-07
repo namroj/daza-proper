@@ -315,7 +315,7 @@ footer {
 }
 @media (min-width: 994px) {
   footer {
-    padding: 120px 70px 110px;
+    padding: 100px 70px 90px;
   }
 }
 footer .logo {
