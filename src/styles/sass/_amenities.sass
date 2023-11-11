@@ -1,65 +1,154 @@
 /* AMENITIES */
 section#amenities
+  background-color: $secondary-color
 
-  #daza
-    padding: 70px 0
-
-    +md
-      padding: 105px 0
+  .data
+    padding: 70px 45px
 
     +lg
-      padding: 140px 0
+      padding: 100px 70px 70px
 
-    .brand
-
-      +md
-        display: flex
-        justify-content: center
-        align-items: center
-
-      a.logo
-        background-image: url(../../../src/assets/icons/daza-logo.svg)
-        background-size: contain
-        background-repeat: no-repeat
-        display: block
-        width: 200px
-        height: 53px
-        margin: 0 auto 35px
-
-        +md
-          width: 300px
-          height: 80px
-
-        +lg
-          width: 400px
-          height: 105px
-
-    .info
-      display: flex
-      flex-direction: column
-      justify-content: center
+    h2
+      color: $accent-color
+      font-size: .9rem
       text-align: center
+      margin-bottom: 35px
 
       +md
-        justify-content: start
-        text-align: left
-        padding-left: 10px
+        font-size: 1.2rem
+        margin-bottom: 60px
 
-      a
+    h3
+      font-family: 'Recoleta'
+      font-size: 2.2rem
+      text-align: center
+      max-width: 300px
+      margin: 0 auto 45px
+
+      +md
+        font-size: 2.5rem
+        max-width: 350px
+        margin: 0 auto 60px
+
+      +lg
+        max-width: 450px
+        font-size: 3.5rem
+
+    .pros
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      row-gap: 30px
+      overflow-x: hidden
+
+      +md
+        flex-direction: flex
+        flex-wrap: nowrap
+        row-gap: 0
+        padding: 0 60px
+
+      .pro
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        width: 50%
+
+        &:first-of-type
+          width: 100%
+
+          +md
+            width: 20%
 
         +md
-          margin: 0 auto 0 0
+          width: 20%
+          justify-content: flex-start
 
-        &:hover,
-        &:focus,
-        &:visited
-          color: $light-color
-          text-decoration: none
+        i
+          width: 45px
+          height: 45px
 
-      p
-        font-family: 'Recoleta'
-        font-size: 2rem
-        margin-bottom: 35px
+          +md
+            width: 56px
+            height: 56px
 
-        +lg
-          font-size: 2.2rem
+          +lg
+            width: 70px
+            height: 70px
+
+          &.pool-deck-solarium
+            background-image: url(../../../src/assets/icons/icon-pool-deck-solarium.svg)
+
+          &.grill
+            background-image: url(../../../src/assets/icons/icon-grill.svg)
+
+          &.green-terrace
+            background-image: url(../../../src/assets/icons/icon-green-terrace.svg)
+
+          &.laundry
+            background-image: url(../../../src/assets/icons/icon-laundry.svg)
+            width: 30px
+
+            +md
+              width: 40px
+
+            +lg
+              width: 50px
+
+          &.bike-area
+            background-image: url(../../../src/assets/icons/icon-bike-area.svg)
+
+        .divider
+          margin-bottom: 10px
+
+          +md
+            margin-bottom: 0
+
+          .line
+            position: relative
+            width: 500px
+            height: 1px
+            background-color: $accent-color
+            margin: 20px 0 25px
+
+            &::before,
+            &::after
+              content: ""
+              position: absolute
+              width: 15px
+              height: 15px
+              background-color: $accent-color
+              border-radius: 50%
+              top: -7px
+              left: 50%
+              transform: translateX(-50%)
+
+        span
+          font-family: 'Recoleta'
+          text-align: center
+          font-size: .8rem
+
+          +md
+            font-size: .9rem
+
+          +lg
+            font-size: 1rem
+
+  .visual
+    background-color: $secondary-color
+    padding: 0
+
+    +md
+      padding: 0 60px 70px
+
+    figure
+
+      img
+        display: block
+        margin: 0 auto 30px
+
+      figcaption
+        display: block
+        margin: 0 auto
+        text-align: center
+        font-size: 1rem

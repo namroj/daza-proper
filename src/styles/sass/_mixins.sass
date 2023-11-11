@@ -1,5 +1,6 @@
 $md: 768
-$lg: 994
+$lg: 992
+$xl: 1200
 
 =md
   @media (min-width: #{$md}px)
@@ -7,4 +8,8 @@ $lg: 994
 
 =lg
   @media (min-width: #{$lg}px)
+    @content
+
+=xl
+  @media (min-width: #{$xl}px)
     @content

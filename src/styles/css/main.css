@@ -45,6 +45,7 @@ a:hover, a:focus, a:visited {
   height: 26px;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 @media (min-width: 768px) {
   .icon {
@@ -70,27 +71,210 @@ h1 {
 }
 
 /* AMENITIES */
-section#amenities #daza {
-  padding: 70px 0;
+section#amenities {
+  background-color: #BACBCA;
+}
+section#amenities .data {
+  padding: 70px 45px;
+}
+@media (min-width: 992px) {
+  section#amenities .data {
+    padding: 100px 70px 70px;
+  }
+}
+section#amenities .data h2 {
+  color: #1B4136;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 35px;
 }
 @media (min-width: 768px) {
-  section#amenities #daza {
+  section#amenities .data h2 {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+  }
+}
+section#amenities .data h3 {
+  font-family: "Recoleta";
+  font-size: 2.2rem;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto 45px;
+}
+@media (min-width: 768px) {
+  section#amenities .data h3 {
+    font-size: 2.5rem;
+    max-width: 350px;
+    margin: 0 auto 60px;
+  }
+}
+@media (min-width: 992px) {
+  section#amenities .data h3 {
+    max-width: 450px;
+    font-size: 3.5rem;
+  }
+}
+section#amenities .data .pros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  overflow-x: hidden;
+}
+@media (min-width: 768px) {
+  section#amenities .data .pros {
+    flex-direction: flex;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    padding: 0 60px;
+  }
+}
+section#amenities .data .pros .pro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+section#amenities .data .pros .pro:first-of-type {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  section#amenities .data .pros .pro:first-of-type {
+    width: 20%;
+  }
+}
+@media (min-width: 768px) {
+  section#amenities .data .pros .pro {
+    width: 20%;
+    justify-content: flex-start;
+  }
+}
+section#amenities .data .pros .pro i {
+  width: 45px;
+  height: 45px;
+}
+@media (min-width: 768px) {
+  section#amenities .data .pros .pro i {
+    width: 56px;
+    height: 56px;
+  }
+}
+@media (min-width: 992px) {
+  section#amenities .data .pros .pro i {
+    width: 70px;
+    height: 70px;
+  }
+}
+section#amenities .data .pros .pro i.pool-deck-solarium {
+  background-image: url(../../../src/assets/icons/icon-pool-deck-solarium.svg);
+}
+section#amenities .data .pros .pro i.grill {
+  background-image: url(../../../src/assets/icons/icon-grill.svg);
+}
+section#amenities .data .pros .pro i.green-terrace {
+  background-image: url(../../../src/assets/icons/icon-green-terrace.svg);
+}
+section#amenities .data .pros .pro i.laundry {
+  background-image: url(../../../src/assets/icons/icon-laundry.svg);
+  width: 30px;
+}
+@media (min-width: 768px) {
+  section#amenities .data .pros .pro i.laundry {
+    width: 40px;
+  }
+}
+@media (min-width: 992px) {
+  section#amenities .data .pros .pro i.laundry {
+    width: 50px;
+  }
+}
+section#amenities .data .pros .pro i.bike-area {
+  background-image: url(../../../src/assets/icons/icon-bike-area.svg);
+}
+section#amenities .data .pros .pro .divider {
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  section#amenities .data .pros .pro .divider {
+    margin-bottom: 0;
+  }
+}
+section#amenities .data .pros .pro .divider .line {
+  position: relative;
+  width: 500px;
+  height: 1px;
+  background-color: #1B4136;
+  margin: 20px 0 25px;
+}
+section#amenities .data .pros .pro .divider .line::before, section#amenities .data .pros .pro .divider .line::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #1B4136;
+  border-radius: 50%;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section#amenities .data .pros .pro span {
+  font-family: "Recoleta";
+  text-align: center;
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  section#amenities .data .pros .pro span {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 992px) {
+  section#amenities .data .pros .pro span {
+    font-size: 1rem;
+  }
+}
+section#amenities .visual {
+  background-color: #BACBCA;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  section#amenities .visual {
+    padding: 0 60px 70px;
+  }
+}
+section#amenities .visual figure img {
+  display: block;
+  margin: 0 auto 30px;
+}
+section#amenities .visual figure figcaption {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* COMPANY */
+section#company {
+  padding: 30px 0 70px;
+}
+@media (min-width: 768px) {
+  section#company {
     padding: 105px 0;
   }
 }
-@media (min-width: 994px) {
-  section#amenities #daza {
+@media (min-width: 992px) {
+  section#company {
     padding: 140px 0;
   }
 }
 @media (min-width: 768px) {
-  section#amenities #daza .brand {
+  section#company .brand {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-section#amenities #daza .brand a.logo {
+section#company .brand a.logo {
   background-image: url(../../../src/assets/icons/daza-logo.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -100,129 +284,134 @@ section#amenities #daza .brand a.logo {
   margin: 0 auto 35px;
 }
 @media (min-width: 768px) {
-  section#amenities #daza .brand a.logo {
+  section#company .brand a.logo {
     width: 300px;
     height: 80px;
   }
 }
-@media (min-width: 994px) {
-  section#amenities #daza .brand a.logo {
+@media (min-width: 992px) {
+  section#company .brand a.logo {
     width: 400px;
     height: 105px;
   }
 }
-section#amenities #daza .info {
+section#company .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 @media (min-width: 768px) {
-  section#amenities #daza .info {
+  section#company .info {
     justify-content: start;
     text-align: left;
     padding-left: 10px;
   }
 }
 @media (min-width: 768px) {
-  section#amenities #daza .info a {
+  section#company .info a {
     margin: 0 auto 0 0;
   }
 }
-section#amenities #daza .info a:hover, section#amenities #daza .info a:focus, section#amenities #daza .info a:visited {
+section#company .info a:hover, section#company .info a:focus, section#company .info a:visited {
   color: #EFEDEC;
   text-decoration: none;
 }
-section#amenities #daza .info p {
+section#company .info p {
   font-family: "Recoleta";
   font-size: 2rem;
   margin-bottom: 35px;
 }
-@media (min-width: 994px) {
-  section#amenities #daza .info p {
+@media (min-width: 992px) {
+  section#company .info p {
     font-size: 2.2rem;
   }
 }
 
 /* CONTACT */
-section#contact #data {
-  padding: 70px 0;
+section#contact .data {
+  padding: 60px 0;
 }
 @media (min-width: 768px) {
-  section#contact #data {
+  section#contact .data {
     padding: 0;
   }
 }
-@media (min-width: 994px) {
-  section#contact #data {
+@media (min-width: 992px) {
+  section#contact .data {
     padding: 60px 0;
   }
 }
-section#contact #data img {
+section#contact .data img {
   margin: 0 auto;
 }
-section#contact #data .info {
+section#contact .data .info {
   height: 100%;
 }
 @media (min-width: 768px) {
-  section#contact #data .info {
+  section#contact .data .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 60px;
   }
 }
-section#contact #data .info h2 {
+section#contact .data .info h2 {
   color: #1B4136;
   font-size: 0.9rem;
   text-align: center;
   margin-bottom: 35px;
 }
 @media (min-width: 768px) {
-  section#contact #data .info h2 {
+  section#contact .data .info h2 {
     font-size: 1.2rem;
     text-align: left;
     margin-bottom: 60px;
   }
 }
-section#contact #data .info a {
+section#contact .data .info a {
   display: block;
   text-align: center;
   font-size: 1.3rem;
 }
 @media (min-width: 768px) {
-  section#contact #data .info a {
+  section#contact .data .info a {
     font-size: 1.5rem;
     text-align: left;
   }
 }
-section#contact #data .info .rrhh {
+section#contact .data .info .rrhh {
   display: flex;
   justify-content: center;
   margin: 35px auto 0;
 }
 @media (min-width: 768px) {
-  section#contact #data .info .rrhh {
+  section#contact .data .info .rrhh {
     margin: 60px 0 0;
     justify-content: start;
   }
 }
-section#contact #data .info .rrhh a:first-of-type {
+section#contact .data .info .rrhh a:first-of-type {
   margin-right: 18px;
 }
-section#contact #data .info .rrhh a.ig {
+section#contact .data .info .rrhh a.ig {
   background-image: url(../../../src/assets/icons/icon-ig.svg);
 }
-section#contact #data .info .rrhh a.ln {
+section#contact .data .info .rrhh a.ln {
   background-image: url(../../../src/assets/icons/icon-ln.svg);
 }
 
 /* CONTACT FORM */
 #form {
   background-color: #EFEDEC;
-  padding: 70px 45px;
+  padding: 60px 45px;
 }
-@media (min-width: 994px) {
+@media (min-width: 768px) {
+  #form {
+    padding: 120px 60px;
+  }
+}
+@media (min-width: 992px) {
   #form {
     padding: 120px 45px;
   }
@@ -302,7 +491,7 @@ section#contact #data .info .rrhh a.ln {
 footer {
   background-color: #1B4136;
   color: #EFEDEC;
-  padding: 70px 0 20px;
+  padding: 60px 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -310,12 +499,12 @@ footer {
 @media (min-width: 768px) {
   footer {
     flex-direction: row;
-    padding: 60px 45px 30px;
+    padding: 60px 60px 30px;
   }
 }
-@media (min-width: 994px) {
+@media (min-width: 992px) {
   footer {
-    padding: 100px 70px 90px;
+    padding: 90px 70px 45px;
   }
 }
 footer .logo {
@@ -333,7 +522,7 @@ footer .logo {
     margin: 0;
   }
 }
-@media (min-width: 994px) {
+@media (min-width: 992px) {
   footer .logo {
     width: 300px;
     height: 90px;
@@ -360,7 +549,7 @@ footer .info a.address:hover, footer .info a.address:focus, footer .info a.addre
     margin-right: 45px;
   }
 }
-@media (min-width: 994px) {
+@media (min-width: 992px) {
   footer .info a.address {
     font-size: 1.2rem;
     margin-right: 70px;
