@@ -98,7 +98,7 @@ section#amenities .data h3 {
   font-family: "Recoleta";
   font-size: 2.2rem;
   text-align: center;
-  max-width: 300px;
+  max-width: 320px;
   margin: 0 auto 45px;
 }
 @media (min-width: 768px) {
@@ -151,13 +151,13 @@ section#amenities .data .pros .pro:first-of-type {
   }
 }
 section#amenities .data .pros .pro i {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
 }
 @media (min-width: 768px) {
   section#amenities .data .pros .pro i {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
   }
 }
 @media (min-width: 992px) {
@@ -177,7 +177,7 @@ section#amenities .data .pros .pro i.green-terrace {
 }
 section#amenities .data .pros .pro i.laundry {
   background-image: url(../../../src/assets/icons/icon-laundry.svg);
-  width: 30px;
+  width: 35px;
 }
 @media (min-width: 768px) {
   section#amenities .data .pros .pro i.laundry {
@@ -221,12 +221,7 @@ section#amenities .data .pros .pro .divider .line::before, section#amenities .da
 section#amenities .data .pros .pro span {
   font-family: "Recoleta";
   text-align: center;
-  font-size: 0.8rem;
-}
-@media (min-width: 768px) {
-  section#amenities .data .pros .pro span {
-    font-size: 0.9rem;
-  }
+  font-size: 0.9rem;
 }
 @media (min-width: 992px) {
   section#amenities .data .pros .pro span {
