@@ -133,7 +133,7 @@ section#neighborhood .pros {
     flex-direction: flex;
     flex-wrap: nowrap;
     row-gap: 0;
-    padding: 60px 0;
+    padding: 60px 0 0;
   }
 }
 section#neighborhood .pros .pro {
