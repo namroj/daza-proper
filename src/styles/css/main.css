@@ -195,6 +195,11 @@ section#neighborhood .pros .pro .divider .line {
   background-color: #BACBCA;
   margin: 20px 0 25px;
 }
+@media (min-width: 992px) {
+  section#neighborhood .pros .pro .divider .line {
+    height: 2px;
+  }
+}
 section#neighborhood .pros .pro .divider .line::before, section#neighborhood .pros .pro .divider .line::after {
   content: "";
   position: absolute;
@@ -363,6 +368,11 @@ section#amenities .data .pros .pro .divider .line {
   height: 1px;
   background-color: #1B4136;
   margin: 20px 0 25px;
+}
+@media (min-width: 992px) {
+  section#amenities .data .pros .pro .divider .line {
+    height: 2px;
+  }
 }
 section#amenities .data .pros .pro .divider .line::before, section#amenities .data .pros .pro .divider .line::after {
   content: "";
