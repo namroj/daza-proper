@@ -2,134 +2,94 @@
 section#neighborhood
 
   .data
-    padding: 70px 45px 0
-
-    +lg
-      padding: 100px 70px 70px
-
-    h2
-      color: $accent-color
-      font-size: .9rem
-      text-align: center
-      margin-bottom: 35px
-
-      +md
-        font-size: 1.2rem
-        margin-bottom: 60px
-
-    h3
-      font-family: 'Recoleta'
-      font-size: 2.2rem
-      text-align: center
-      margin: 0 auto 15px
-
-      +md
-        font-size: 2.5rem
-        margin: 0 auto 20px
-
-      +lg
-        font-size: 3.5rem
-
-    h4
-      text-align: center
-      font-size: 1rem
-
-      +md
-        font-size: 1.5rem
-
-  .pros
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
-    row-gap: 30px
-    overflow-x: hidden
-    padding: 60px 0
 
     +md
-      flex-direction: flex
-      flex-wrap: nowrap
-      row-gap: 0
+      padding-left: 0
+      padding-right: 0
 
-    .pro
+    .pros
       display: flex
-      flex-direction: column
-      align-items: center
-      justify-content: space-
-      width: 50%
+      justify-content: center
+      flex-wrap: wrap
+      row-gap: 30px
+      padding: 60px 0
+      overflow-x: hidden
 
       +md
-        width: 25%
-        justify-content: flex-start
+        flex-direction: flex
+        flex-wrap: nowrap
+        row-gap: 0
 
-      i
-        width: 55px
-        height: 55px
-
-        +md
-          width: 60px
-          height: 60px
-
-        +lg
-          width: 70px
-          height: 70px
-
-        &.park
-          background-image: url(../../../src/assets/icons/icon-park.svg)
-
-        &.wine
-          background-image: url(../../../src/assets/icons/icon-wine.svg)
-
-        &.bus
-          background-image: url(../../../src/assets/icons/icon-bus.svg)
-
-        &.train
-          background-image: url(../../../src/assets/icons/icon-train.svg)
-
-        &.bike-area
-          background-image: url(../../../src/assets/icons/icon-bike-area.svg)
-
-      .divider
-        margin-bottom: 10px
+      .pro
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-
+        width: 50%
 
         +md
-          margin-bottom: 0
+          width: 25%
+          justify-content: flex-start
 
-        .line
-          position: relative
-          width: 500px
-          height: 1px
-          background-color: $secondary-color
-          margin: 20px 0 25px
+        i
+          width: 55px
+          height: 55px
+
+          +md
+            width: 60px
+            height: 60px
 
           +lg
-            height: 2px
+            width: 70px
+            height: 70px
 
-          &::before,
-          &::after
-            content: ""
-            position: absolute
-            width: 15px
-            height: 15px
+          &.park
+            background-image: url(../../../src/assets/icons/icon-park.svg)
+
+          &.wine
+            background-image: url(../../../src/assets/icons/icon-wine.svg)
+
+          &.bus
+            background-image: url(../../../src/assets/icons/icon-bus.svg)
+
+          &.train
+            background-image: url(../../../src/assets/icons/icon-train.svg)
+
+          &.bike-area
+            background-image: url(../../../src/assets/icons/icon-bike-area.svg)
+
+        .divider
+          margin-bottom: 10px
+
+          +md
+            margin-bottom: 0
+
+          .line
+            position: relative
+            width: 500px
+            height: 1px
             background-color: $secondary-color
-            border-radius: 50%
-            top: -7px
-            left: 50%
-            transform: translateX(-50%)
+            margin: 20px 0 25px
 
-      span
-        font-family: 'Recoleta'
-        font-size: .9rem
-        text-align: center
+            +lg
+              height: 2px
 
-        +lg
-          font-size: 1rem
+            &::before,
+            &::after
+              content: ""
+              position: absolute
+              width: 15px
+              height: 15px
+              background-color: $secondary-color
+              border-radius: 50%
+              top: -7px
+              left: 50%
+              transform: translateX(-50%)
 
-  .visual
-    padding: 0
+        span
+          font-family: 'Recoleta'
+          font-size: .9rem
+          text-align: center
 
-    figure
-      margin: 0
-
-      img
-        display: block
-        margin: 0 auto
+          +lg
+            font-size: 1rem
