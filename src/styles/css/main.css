@@ -73,9 +73,19 @@ h1 {
 section .data {
   padding: 70px 45px 0;
 }
+@media (min-width: 768px) {
+  section .data {
+    padding: 70px 60px 0;
+  }
+}
 @media (min-width: 992px) {
   section .data {
-    padding: 100px 70px 70px;
+    padding: 100px 60px 60px;
+  }
+}
+@media (min-width: 1200px) {
+  section .data {
+    padding: 100px 0 60px;
   }
 }
 section .data h2 {
@@ -128,7 +138,7 @@ section .visual figure img {
 }
 section .visual figure figcaption {
   display: block;
-  margin: 0 auto;
+  margin: 15px auto 0;
   text-align: center;
   font-size: 1rem;
 }
@@ -139,12 +149,6 @@ section#project .data h4 {
 }
 
 /* NEIGHBORHOOD */
-@media (min-width: 768px) {
-  section#neighborhood .data {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 section#neighborhood .data .pros {
   display: flex;
   justify-content: center;
@@ -158,13 +162,14 @@ section#neighborhood .data .pros {
     flex-direction: flex;
     flex-wrap: nowrap;
     row-gap: 0;
+    padding: 60px 0 30px;
   }
 }
 section#neighborhood .data .pros .pro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-;
+  justify-content: space-between;
   width: 50%;
 }
 @media (min-width: 768px) {
@@ -268,7 +273,7 @@ section#amenities .data .pros {
     flex-direction: flex;
     flex-wrap: nowrap;
     row-gap: 0;
-    padding: 0 60px;
+    padding: 60px 0 30px;
   }
 }
 section#amenities .data .pros .pro {
