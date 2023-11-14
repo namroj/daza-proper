@@ -1,5 +1,59 @@
 /* UNITS */
-section#units
+section#unidades
 
   h4
     margin-bottom: 60px
+
+  .units
+    padding: 60px 45px
+
+    +md
+      display: flex
+      padding: 60px
+      justify-content: space-between
+      gap: 60px
+
+    .group
+
+      +md
+        width: 50%
+
+      &:first-of-type
+
+        .unit
+
+          &:last-of-type
+            border-bottom: 1px solid $accent-color
+
+            +md
+              border-bottom: none
+
+      &:last-of-type
+
+        .unit
+
+          &:last-of-type
+            border-bottom: none
+
+      .unit
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid $accent-color
+        padding: 10px 0
+
+        +md
+          padding: 15px 0
+
+        span
+          font-size: .9rem
+          font-weight: 700
+
+          +md
+            font-size: 1rem
+
+        a.download
+          display: block
+          width: 24px
+          height: 24px
+          background-image: url(../../../src/assets/icons/icon-download.svg)

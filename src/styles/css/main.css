@@ -13,6 +13,14 @@
   text-rendering: optimizeLegibility;
 }
 @font-face {
+  font-family: "Acherus Grotesque";
+  src: url("../../assets/fonts/AcherusGrotesque-Medium.eot");
+  src: url("../../assets/fonts/AcherusGrotesque-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/AcherusGrotesque-Medium.svg#AcherusGrotesque-Medium") format("svg"), url("../../assets/fonts/AcherusGrotesque-Medium.ttf") format("truetype"), url("../../assets/fonts/AcherusGrotesque-Medium.woff") format("woff"), url("../../assets/fonts/AcherusGrotesque-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
   font-family: "Recoleta";
   src: url("../../assets/fonts/Recoleta-Regular.eot");
   src: url("../../assets/fonts/Recoleta-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Recoleta-Regular.svg#Recoleta-Regular") format("svg"), url("../../assets/fonts/Recoleta-Regular.ttf") format("truetype"), url("../../assets/fonts/Recoleta-Regular.woff") format("woff"), url("../../assets/fonts/Recoleta-Regular.woff2") format("woff2");
@@ -144,12 +152,12 @@ section .visual figure figcaption {
 }
 
 /* PROJECT */
-section#project .data h4 {
+section#proyecto .data h4 {
   margin-bottom: 60px;
 }
 
 /* NEIGHBORHOOD */
-section#neighborhood .data .pros {
+section#el-barrio .data .pros {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -158,14 +166,14 @@ section#neighborhood .data .pros {
   overflow-x: hidden;
 }
 @media (min-width: 768px) {
-  section#neighborhood .data .pros {
+  section#el-barrio .data .pros {
     flex-direction: flex;
     flex-wrap: nowrap;
     row-gap: 0;
     padding: 60px 0 30px;
   }
 }
-section#neighborhood .data .pros .pro {
+section#el-barrio .data .pros .pro {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,51 +181,51 @@ section#neighborhood .data .pros .pro {
   width: 50%;
 }
 @media (min-width: 768px) {
-  section#neighborhood .data .pros .pro {
+  section#el-barrio .data .pros .pro {
     width: 25%;
     justify-content: flex-start;
   }
 }
-section#neighborhood .data .pros .pro i {
+section#el-barrio .data .pros .pro i {
   width: 55px;
   height: 55px;
 }
 @media (min-width: 768px) {
-  section#neighborhood .data .pros .pro i {
+  section#el-barrio .data .pros .pro i {
     width: 60px;
     height: 60px;
   }
 }
 @media (min-width: 992px) {
-  section#neighborhood .data .pros .pro i {
+  section#el-barrio .data .pros .pro i {
     width: 70px;
     height: 70px;
   }
 }
-section#neighborhood .data .pros .pro i.park {
+section#el-barrio .data .pros .pro i.park {
   background-image: url(../../../src/assets/icons/icon-park.svg);
 }
-section#neighborhood .data .pros .pro i.wine {
+section#el-barrio .data .pros .pro i.wine {
   background-image: url(../../../src/assets/icons/icon-wine.svg);
 }
-section#neighborhood .data .pros .pro i.bus {
+section#el-barrio .data .pros .pro i.bus {
   background-image: url(../../../src/assets/icons/icon-bus.svg);
 }
-section#neighborhood .data .pros .pro i.train {
+section#el-barrio .data .pros .pro i.train {
   background-image: url(../../../src/assets/icons/icon-train.svg);
 }
-section#neighborhood .data .pros .pro i.bike-area {
+section#el-barrio .data .pros .pro i.bike-area {
   background-image: url(../../../src/assets/icons/icon-bike-area.svg);
 }
-section#neighborhood .data .pros .pro .divider {
+section#el-barrio .data .pros .pro .divider {
   margin-bottom: 10px;
 }
 @media (min-width: 768px) {
-  section#neighborhood .data .pros .pro .divider {
+  section#el-barrio .data .pros .pro .divider {
     margin-bottom: 0;
   }
 }
-section#neighborhood .data .pros .pro .divider .line {
+section#el-barrio .data .pros .pro .divider .line {
   position: relative;
   width: 500px;
   height: 1px;
@@ -225,11 +233,11 @@ section#neighborhood .data .pros .pro .divider .line {
   margin: 20px 0 25px;
 }
 @media (min-width: 992px) {
-  section#neighborhood .data .pros .pro .divider .line {
+  section#el-barrio .data .pros .pro .divider .line {
     height: 2px;
   }
 }
-section#neighborhood .data .pros .pro .divider .line::before, section#neighborhood .data .pros .pro .divider .line::after {
+section#el-barrio .data .pros .pro .divider .line::before, section#el-barrio .data .pros .pro .divider .line::after {
   content: "";
   position: absolute;
   width: 15px;
@@ -240,20 +248,74 @@ section#neighborhood .data .pros .pro .divider .line::before, section#neighborho
   left: 50%;
   transform: translateX(-50%);
 }
-section#neighborhood .data .pros .pro span {
+section#el-barrio .data .pros .pro span {
   font-family: "Recoleta";
   font-size: 0.9rem;
   text-align: center;
 }
 @media (min-width: 992px) {
-  section#neighborhood .data .pros .pro span {
+  section#el-barrio .data .pros .pro span {
     font-size: 1rem;
   }
 }
 
 /* UNITS */
-section#units h4 {
+section#unidades h4 {
   margin-bottom: 60px;
+}
+section#unidades .units {
+  padding: 60px 45px;
+}
+@media (min-width: 768px) {
+  section#unidades .units {
+    display: flex;
+    padding: 60px;
+    justify-content: space-between;
+    gap: 60px;
+  }
+}
+@media (min-width: 768px) {
+  section#unidades .units .group {
+    width: 50%;
+  }
+}
+section#unidades .units .group:first-of-type .unit:last-of-type {
+  border-bottom: 1px solid #1B4136;
+}
+@media (min-width: 768px) {
+  section#unidades .units .group:first-of-type .unit:last-of-type {
+    border-bottom: none;
+  }
+}
+section#unidades .units .group:last-of-type .unit:last-of-type {
+  border-bottom: none;
+}
+section#unidades .units .group .unit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1B4136;
+  padding: 10px 0;
+}
+@media (min-width: 768px) {
+  section#unidades .units .group .unit {
+    padding: 15px 0;
+  }
+}
+section#unidades .units .group .unit span {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  section#unidades .units .group .unit span {
+    font-size: 1rem;
+  }
+}
+section#unidades .units .group .unit a.download {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../../src/assets/icons/icon-download.svg);
 }
 
 /* AMENITIES */
@@ -390,27 +452,27 @@ section#amenities .visual {
 }
 
 /* COMPANY */
-section#company {
+section#empresa {
   padding: 30px 0 70px;
 }
 @media (min-width: 768px) {
-  section#company {
+  section#empresa {
     padding: 105px 0;
   }
 }
 @media (min-width: 992px) {
-  section#company {
+  section#empresa {
     padding: 140px 0;
   }
 }
 @media (min-width: 768px) {
-  section#company .brand {
+  section#empresa .brand {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-section#company .brand a.logo {
+section#empresa .brand a.logo {
   background-image: url(../../../src/assets/icons/daza-logo.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -420,120 +482,120 @@ section#company .brand a.logo {
   margin: 30px auto 35px;
 }
 @media (min-width: 768px) {
-  section#company .brand a.logo {
+  section#empresa .brand a.logo {
     width: 300px;
     height: 80px;
   }
 }
 @media (min-width: 992px) {
-  section#company .brand a.logo {
+  section#empresa .brand a.logo {
     width: 400px;
     height: 105px;
   }
 }
-section#company .info {
+section#empresa .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 @media (min-width: 768px) {
-  section#company .info {
+  section#empresa .info {
     justify-content: start;
     text-align: left;
     padding-left: 10px;
   }
 }
 @media (min-width: 768px) {
-  section#company .info a {
+  section#empresa .info a {
     margin: 0 auto 0 0;
   }
 }
-section#company .info a:hover, section#company .info a:focus, section#company .info a:visited {
+section#empresa .info a:hover, section#empresa .info a:focus, section#empresa .info a:visited {
   color: #EFEDEC;
   text-decoration: none;
 }
-section#company .info p {
+section#empresa .info p {
   font-family: "Recoleta";
   font-size: 2rem;
   margin-bottom: 35px;
 }
 @media (min-width: 992px) {
-  section#company .info p {
+  section#empresa .info p {
     font-size: 2.2rem;
   }
 }
 
 /* CONTACT */
-section#contact .data {
+section#contacto .data {
   padding: 60px 0;
 }
 @media (min-width: 768px) {
-  section#contact .data {
+  section#contacto .data {
     padding: 0;
   }
 }
 @media (min-width: 992px) {
-  section#contact .data {
+  section#contacto .data {
     padding: 60px 0;
   }
 }
-section#contact .data img {
+section#contacto .data img {
   margin: 0 auto;
 }
-section#contact .data .info {
+section#contacto .data .info {
   height: 100%;
 }
 @media (min-width: 768px) {
-  section#contact .data .info {
+  section#contacto .data .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 60px;
   }
 }
-section#contact .data .info h2 {
+section#contacto .data .info h2 {
   color: #1B4136;
   font-size: 0.9rem;
   text-align: center;
   margin-bottom: 35px;
 }
 @media (min-width: 768px) {
-  section#contact .data .info h2 {
+  section#contacto .data .info h2 {
     font-size: 1.2rem;
     text-align: left;
     margin-bottom: 60px;
   }
 }
-section#contact .data .info a {
+section#contacto .data .info a {
   display: block;
   text-align: center;
   font-size: 1.3rem;
 }
 @media (min-width: 768px) {
-  section#contact .data .info a {
+  section#contacto .data .info a {
     font-size: 1.5rem;
     text-align: left;
   }
 }
-section#contact .data .info .rrhh {
+section#contacto .data .info .rrhh {
   display: flex;
   justify-content: center;
   margin: 35px auto 0;
 }
 @media (min-width: 768px) {
-  section#contact .data .info .rrhh {
+  section#contacto .data .info .rrhh {
     margin: 60px 0 0;
     justify-content: start;
   }
 }
-section#contact .data .info .rrhh a:first-of-type {
+section#contacto .data .info .rrhh a:first-of-type {
   margin-right: 18px;
 }
-section#contact .data .info .rrhh a.ig {
+section#contacto .data .info .rrhh a.ig {
   background-image: url(../../../src/assets/icons/icon-ig.svg);
 }
-section#contact .data .info .rrhh a.ln {
+section#contacto .data .info .rrhh a.ln {
   background-image: url(../../../src/assets/icons/icon-ln.svg);
 }
 
