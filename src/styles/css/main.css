@@ -35,6 +35,7 @@
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -45,6 +46,24 @@ a {
 a:hover, a:focus, a:visited {
   color: #000000;
   text-decoration: none;
+}
+a.wa {
+  background-image: url(../../../src/assets/icons/icon-wa.svg);
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  transition: 0.1s ease-in;
+}
+a.wa:hover, a.wa:focus {
+  transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  a.wa {
+    right: 20px;
+    bottom: 20px;
+  }
 }
 
 .icon {

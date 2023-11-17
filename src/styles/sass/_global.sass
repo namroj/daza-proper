@@ -4,6 +4,7 @@
   font-size: 1rem
 
 body
+  position: relative
   overflow-x: hidden
 
 a
@@ -15,6 +16,23 @@ a
   &:visited
     color: $dark-color
     text-decoration: none
+
+  &.wa
+    background-image: url(../../../src/assets/icons/icon-wa.svg)
+    width: 60px
+    height: 60px
+    position: fixed
+    right: 15px
+    bottom: 15px
+    transition: .1s ease-in
+
+    &:hover,
+    &:focus
+      transform: scale(1.1)
+
+    +md
+      right: 20px
+      bottom: 20px
 
 .icon
   display: block
