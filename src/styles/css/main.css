@@ -55,14 +55,15 @@ a.wa {
   right: 15px;
   bottom: 15px;
   transition: 0.1s ease-in;
+  z-index: 1;
 }
 a.wa:hover, a.wa:focus {
   transform: scale(1.1);
 }
 @media (min-width: 768px) {
   a.wa {
-    right: 20px;
-    bottom: 20px;
+    right: 40px;
+    bottom: 40px;
   }
 }
 
@@ -706,12 +707,14 @@ section#contacto .data .info .rrhh a.ln {
 
 /* FOOTER */
 footer {
+  position: relative;
   background-color: #1B4136;
   color: #EFEDEC;
   padding: 60px 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 2;
 }
 @media (min-width: 768px) {
   footer {
