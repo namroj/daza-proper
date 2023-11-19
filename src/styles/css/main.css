@@ -3,6 +3,7 @@
 @import '../css/normalize.css';
 @import '../css/bootstrap.min.css';
 @import '../css/animate.css';
+@import '../css/jquery.bxslider.css';
 /* FONTS */
 @font-face {
   font-family: "Acherus Grotesque";
@@ -171,6 +172,62 @@ section .visual figure figcaption {
   font-size: 1rem;
 }
 
+/* SLIDER */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 400px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.slider .caption {
+  margin-top: -30px;
+  text-align: center;
+}
+.slider .bx-viewport, .slider .bx-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.slider .bxslider {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.slider .bxslider li {
+  height: 100%;
+}
+.slider .bxslider li span {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.slider .bx-wrapper {
+  border: 0;
+}
+.slider .bx-wrapper .bx-pager.bx-default-pager a {
+  opacity: 1;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.slider .bx-wrapper .bx-pager.bx-default-pager a.active {
+  background-color: #fff;
+}
+.slider .bx-wrapper .bx-pager.bx-default-pager .bx-viewport {
+  border: none;
+}
+.slider .bx-wrapper .bx-pager.bx-default-pager img {
+  width: 100%;
+}
+.slider .bx-wrapper .bx-pager.bx-default-pager .bx-pager-item {
+  padding: 0 5px;
+}
+
 /* PROJECT */
 section#proyecto .data h4 {
   margin-bottom: 60px;
@@ -282,6 +339,9 @@ section#el-barrio .data .pros .pro span {
 /* UNITS */
 section#unidades h4 {
   margin-bottom: 60px;
+}
+section#unidades .visual {
+  margin-bottom: 45px;
 }
 section#unidades .units {
   padding: 60px 45px;
