@@ -217,11 +217,11 @@ section .visual figure figcaption {
 }
 .slider .bx-wrapper .bx-pager.bx-default-pager a {
   opacity: 1;
-  background-color: transparent;
-  border: 1px solid #fff;
+  background-color: transparent !important;
+  border: 1px solid #fff !important;
 }
 .slider .bx-wrapper .bx-pager.bx-default-pager a.active {
-  background-color: #fff;
+  background-color: #fff !important;
 }
 .slider .bx-wrapper .bx-pager.bx-default-pager .bx-viewport {
   border: none;

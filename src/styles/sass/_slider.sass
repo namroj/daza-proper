@@ -39,21 +39,23 @@
   .bx-wrapper
     border: 0
 
-    .bx-pager.bx-default-pager
+    .bx-pager
 
-      a
-        opacity: 1
-        background-color: transparent
-        border: 1px solid #fff
+      &.bx-default-pager
 
-        &.active
-          background-color: #fff
+        a
+          opacity: 1
+          background-color: transparent !important
+          border: 1px solid #fff !important
 
-      .bx-viewport
-        border: none
+          &.active
+            background-color: #fff !important
 
-      img
-        width: 100%
+        .bx-viewport
+          border: none
 
-      .bx-pager-item
-        padding: 0 5px
+        img
+          width: 100%
+
+        .bx-pager-item
+          padding: 0 5px

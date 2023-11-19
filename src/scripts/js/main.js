@@ -25,7 +25,7 @@ const generateSliders = () => {
     keyboardEnabled: true,
     mode: 'horizontal',
     pager: true,
-    pause: 40000,
+    pause: 4000,
     responsive: true,
     speed: 1000,
     onSliderLoad: (currentIndex) => {
@@ -42,7 +42,7 @@ const generateSliders = () => {
     keyboardEnabled: true,
     mode: 'horizontal',
     pager: true,
-    pause: 40000,
+    pause: 4000,
     responsive: true,
     speed: 1000,
     onSliderLoad: (currentIndex) => {
