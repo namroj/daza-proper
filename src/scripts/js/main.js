@@ -7,9 +7,11 @@ import './scrollTo.min.js'
 
 const sliders = []
 
-const updateSliderCaption = (index) => {
-  const caption = $('.bxslider li:not(.bx-clone)').eq(index).data('caption')
-  $('.slider .caption').text(caption)
+const updateSliderCaption = (index, clazz) => {
+  const caption = $(`.bxslider.${clazz} li:not(.bx-clone)`)
+    .eq(index)
+    .data('caption')
+  $(`.slider.${clazz} .caption`).text(caption)
 }
 
 const generateSliders = () => {
@@ -27,14 +29,32 @@ const generateSliders = () => {
     responsive: true,
     speed: 1000,
     onSliderLoad: (currentIndex) => {
-      updateSliderCaption(currentIndex)
+      updateSliderCaption(currentIndex, 'sm')
     },
     onSlideAfter: (slideElement, oldIndex, newIndex) => {
-      updateSliderCaption(newIndex)
+      updateSliderCaption(newIndex, 'sm')
+    }
+  })
+
+  const mdSlider = $('.bxslider.md').bxSlider({
+    auto: $('.bxslider.md li').length > 1,
+    controls: false,
+    keyboardEnabled: true,
+    mode: 'horizontal',
+    pager: true,
+    pause: 40000,
+    responsive: true,
+    speed: 1000,
+    onSliderLoad: (currentIndex) => {
+      updateSliderCaption(currentIndex, 'md')
+    },
+    onSlideAfter: (slideElement, oldIndex, newIndex) => {
+      updateSliderCaption(newIndex, 'md')
     }
   })
 
   sliders.push(smSlider)
+  sliders.push(mdSlider)
 }
 
 const getCurrentYear = () => new Date().getFullYear()
