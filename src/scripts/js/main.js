@@ -81,6 +81,8 @@ $(window).on('resize', () => {
 })
 
 $(window).on('load', () => {
+  $('#loader').delay(1000).fadeOut('slow')
+
   generateSliders()
 })
 

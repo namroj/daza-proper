@@ -94,11 +94,6 @@ button,
   margin: 0 auto;
 }
 
-/* TODO remove until header is done */
-h1 {
-  display: none;
-}
-
 section .data {
   padding: 70px 45px 0;
 }
@@ -172,6 +167,39 @@ section .visual figure figcaption {
   font-size: 1rem;
 }
 
+/* LOADER */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1B4136;
+  z-index: 9997;
+}
+#loader .wall {
+  background-color: #1B4136;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9998;
+}
+#loader .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+#loader .logo img {
+  width: 280px;
+}
+@media (min-width: 768px) {
+  #loader .logo img {
+    width: 350px;
+  }
+}
+
 /* SLIDER */
 .slider {
   position: relative;
@@ -191,7 +219,8 @@ section .visual figure figcaption {
   margin-top: -30px;
   text-align: center;
 }
-.slider .bx-viewport, .slider .bx-wrapper {
+.slider .bx-viewport,
+.slider .bx-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
@@ -215,13 +244,16 @@ section .visual figure figcaption {
 .slider .bx-wrapper {
   border: 0;
 }
+.slider .bx-wrapper .bx-pager {
+  z-index: 3;
+}
 .slider .bx-wrapper .bx-pager.bx-default-pager a {
   opacity: 1;
-  background-color: transparent !important;
-  border: 1px solid #fff !important;
+  background-color: transparent;
+  border: 1px solid #fff;
 }
 .slider .bx-wrapper .bx-pager.bx-default-pager a.active {
-  background-color: #fff !important;
+  background-color: #fff;
 }
 .slider .bx-wrapper .bx-pager.bx-default-pager .bx-viewport {
   border: none;
@@ -234,8 +266,39 @@ section .visual figure figcaption {
 }
 
 /* HEADER */
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  /* TODO remove until header is done */
+}
+header h1 {
+  display: none;
+}
+@media (min-width: 768px) {
+  header {
+    max-height: 768px;
+  }
+}
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  header .overlay {
+    max-height: 768px;
+  }
+}
 header .slider {
   height: 100vh;
+  z-index: 1;
 }
 
 /* PROJECT */

@@ -57,10 +57,6 @@ button,
   border-radius: 20px
   margin: 0 auto
 
-/* TODO remove until header is done */
-h1
-  display: none
-
 section
 
   .data
@@ -121,6 +117,36 @@ section
         text-align: center
         font-size: 1rem
 
+/* LOADER */
+#loader
+  position: fixed
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+  background-color: $accent-color
+  z-index: 9997
+
+  .wall
+    background-color: $accent-color
+    position: absolute
+    height: 100vh
+    width: 100vw
+    z-index: 9998
+
+  .logo
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    z-index: 9999
+
+    img
+      width: 280px
+
+      +md
+        width: 350px
+
 /* SLIDER */
 .slider
   position: relative
@@ -138,7 +164,8 @@ section
     margin-top: -30px
     text-align: center
 
-  .bx-viewport, .bx-wrapper
+  .bx-viewport,
+  .bx-wrapper
     position: relative
     width: 100%
     height: 100%
@@ -163,16 +190,17 @@ section
     border: 0
 
     .bx-pager
+      z-index: 3
 
       &.bx-default-pager
 
         a
           opacity: 1
-          background-color: transparent !important
-          border: 1px solid #fff !important
+          background-color: transparent
+          border: 1px solid #fff
 
           &.active
-            background-color: #fff !important
+            background-color: #fff
 
         .bx-viewport
           border: none
