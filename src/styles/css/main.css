@@ -167,7 +167,7 @@ section .visual figure img {
 }
 section .visual figure figcaption {
   display: block;
-  margin: 15px auto 0;
+  margin: 30px auto 0;
   text-align: center;
   font-size: 1rem;
 }
