@@ -233,6 +233,11 @@ section .visual figure figcaption {
   padding: 0 5px;
 }
 
+/* HEADER */
+header .slider {
+  height: 100vh;
+}
+
 /* PROJECT */
 section#proyecto .data h4 {
   margin-bottom: 60px;
@@ -612,6 +617,9 @@ section#empresa .info p {
 }
 
 /* CONTACT */
+section#contacto {
+  /* CONTACT FORM */
+}
 section#contacto .data {
   padding: 60px 0;
 }
@@ -683,23 +691,21 @@ section#contacto .data .info .rrhh a.ig {
 section#contacto .data .info .rrhh a.ln {
   background-image: url(../../../src/assets/icons/icon-ln.svg);
 }
-
-/* CONTACT FORM */
-#form {
+section#contacto #form {
   background-color: #EFEDEC;
   padding: 60px 45px;
 }
 @media (min-width: 768px) {
-  #form {
+  section#contacto #form {
     padding: 120px 60px;
   }
 }
 @media (min-width: 992px) {
-  #form {
+  section#contacto #form {
     padding: 120px 45px;
   }
 }
-#form h2 {
+section#contacto #form h2 {
   font-family: "Recoleta";
   font-size: 2.2rem;
   text-align: center;
@@ -707,65 +713,65 @@ section#contacto .data .info .rrhh a.ln {
   margin-bottom: 45px;
 }
 @media (min-width: 768px) {
-  #form h2 {
+  section#contacto #form h2 {
     font-size: 3rem;
   }
 }
-#form form {
+section#contacto #form form {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  #form form {
+  section#contacto #form form {
     max-width: 768px;
     margin: 0 auto;
   }
 }
 @media (min-width: 768px) {
-  #form form .full-name {
+  section#contacto #form form .full-name {
     display: flex;
     gap: 25px;
   }
 }
-#form form input,
-#form form textarea {
+section#contacto #form form input,
+section#contacto #form form textarea {
   width: 100%;
   border: 1px solid #1B4136;
   padding: 7px;
   align-self: center;
   color: #000000;
 }
-#form form input::-moz-placeholder, #form form textarea::-moz-placeholder {
+section#contacto #form form input::-moz-placeholder, section#contacto #form form textarea::-moz-placeholder {
   color: #000000;
   opacity: 1;
 }
-#form form input::placeholder,
-#form form textarea::placeholder {
+section#contacto #form form input::placeholder,
+section#contacto #form form textarea::placeholder {
   color: #000000;
   opacity: 1;
 }
 @media (min-width: 768px) {
-  #form form input,
-  #form form textarea {
+  section#contacto #form form input,
+  section#contacto #form form textarea {
     padding: 10px;
   }
 }
-#form form input {
+section#contacto #form form input {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  #form form input {
+  section#contacto #form form input {
     margin-bottom: 25px;
   }
 }
-#form form textarea {
+section#contacto #form form textarea {
   resize: none;
 }
-#form form button {
+section#contacto #form form button {
   margin-top: 40px;
 }
 @media (min-width: 768px) {
-  #form form button {
+  section#contacto #form form button {
     margin-top: 45px;
   }
 }

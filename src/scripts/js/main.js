@@ -7,11 +7,35 @@ import './scrollTo.min.js'
 
 const sliders = []
 
-const updateSliderCaption = (index, clazz) => {
-  const caption = $(`.bxslider.${clazz} li:not(.bx-clone)`)
+const updateSliderCaption = (index, container, device) => {
+  const caption = $(`#unidades .bxslider.${device} li:not(.bx-clone)`)
     .eq(index)
     .data('caption')
-  $(`.slider.${clazz} .caption`).text(caption)
+
+  $(`${container} .slider.${device} .caption`).text(caption)
+}
+
+const buildSlider = (config) => {
+  const { container, device, isCaptionEnabled } = config
+
+  return $(`${container} .bxslider.${device}`).bxSlider({
+    auto: $(`${container} .bxslider.${device} li`).length > 1,
+    controls: false,
+    keyboardEnabled: true,
+    mode: 'horizontal',
+    pager: true,
+    pause: 4000,
+    responsive: true,
+    speed: 1000,
+    onSliderLoad: (currentIndex) => {
+      if (!isCaptionEnabled) return
+      updateSliderCaption(currentIndex, container, device)
+    },
+    onSlideAfter: (slideElement, oldIndex, newIndex) => {
+      if (!isCaptionEnabled) return
+      updateSliderCaption(newIndex, container, device)
+    }
+  })
 }
 
 const generateSliders = () => {
@@ -19,42 +43,31 @@ const generateSliders = () => {
     $(this).backstretch($(this).attr('data-bg'))
   })
 
-  const smSlider = $('.bxslider.sm').bxSlider({
-    auto: $('.bxslider.sm li').length > 1,
-    controls: false,
-    keyboardEnabled: true,
-    mode: 'horizontal',
-    pager: true,
-    pause: 4000,
-    responsive: true,
-    speed: 1000,
-    onSliderLoad: (currentIndex) => {
-      updateSliderCaption(currentIndex, 'sm')
-    },
-    onSlideAfter: (slideElement, oldIndex, newIndex) => {
-      updateSliderCaption(newIndex, 'sm')
-    }
+  const headerSmSlider = buildSlider({
+    container: 'header',
+    device: 'sm',
+    isCaptionEnabled: false
   })
 
-  const mdSlider = $('.bxslider.md').bxSlider({
-    auto: $('.bxslider.md li').length > 1,
-    controls: false,
-    keyboardEnabled: true,
-    mode: 'horizontal',
-    pager: true,
-    pause: 4000,
-    responsive: true,
-    speed: 1000,
-    onSliderLoad: (currentIndex) => {
-      updateSliderCaption(currentIndex, 'md')
-    },
-    onSlideAfter: (slideElement, oldIndex, newIndex) => {
-      updateSliderCaption(newIndex, 'md')
-    }
+  const headerMdSlider = buildSlider({
+    container: 'header',
+    device: 'md',
+    isCaptionEnabled: false
   })
 
-  sliders.push(smSlider)
-  sliders.push(mdSlider)
+  const unitsSmSlider = buildSlider({
+    container: '#unidades',
+    device: 'sm',
+    isCaptionEnabled: true
+  })
+
+  const unitsMdSlider = buildSlider({
+    container: '#unidades',
+    device: 'md',
+    isCaptionEnabled: true
+  })
+
+  sliders.push(headerSmSlider, headerMdSlider, unitsSmSlider, unitsMdSlider)
 }
 
 const getCurrentYear = () => new Date().getFullYear()
