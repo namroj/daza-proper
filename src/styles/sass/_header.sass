@@ -3,12 +3,87 @@ header
   position: relative
   width: 100%
   height: 100vh
-  z-index: 1
+  overflow-x: hidden
+  z-index: 4
 
   +md
     max-height: 768px
 
-  /* TODO remove until header is done */
+  nav
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 45px
+    height: 0
+    background-color: $accent-color
+    z-index: 4
+
+    &.visible
+      position: fixed
+      width: 100%
+      height: 100vh
+      top: 0
+      justify-content: center
+      align-items: center
+
+      .toggler
+        position: relative
+        top: unset
+        left: unset
+
+    .toggler
+      position: fixed
+      width: 22px
+      height: 15px
+      top: 70px
+      left: 50%
+      transform: translateX(-50%)
+      background-image: url(../../../src/assets/icons/icon-menu.svg)
+      outline: 3px solid transparent
+      cursor: pointer
+      z-index: 4
+
+      +md
+        display: none
+
+      &.clicked
+        background-image: url(../../../src/assets/icons/icon-x.svg)
+        width: 15px
+        height: 22px
+
+      &.scrolled
+        background-color: $accent-color
+        outline: 3px solid $accent-color
+        left: calc(100% - 12px)
+        transform: translateX(-100%)
+
+    ul
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      gap: 45px
+      padding-left: 0
+
+      li
+        list-style: none
+
+        a
+          font-family: 'Recoleta'
+          font-size: 1.8rem
+          color: $light-color
+          text-align: center
+          border-bottom: 1px solid $accent-color
+
+          &:visited
+            color: $light-color
+
+          &.active,
+          &:hover,
+          &:focus
+            color: $light-color
+            border-bottom: 1px solid $light-color
+
   h1
     text-indent: 9999px
     background-image: url(../../../src/assets/icons/logo.svg)
@@ -27,22 +102,10 @@ header
       width: 350px
       height: 200px
 
-  .overlay
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0, .3)
-    pointer-events: none
-    z-index: 2
-
-    +md
-      max-height: 768px
-
   .slider
     height: 100vh
     z-index: 1
+    overflow-x: hidden
 
     .bxslider li::after
       content: ""

@@ -29,6 +29,17 @@
   font-weight: 400;
   text-rendering: optimizeLegibility;
 }
+section#contacto #form form input.error,
+section#contacto #form form textarea.error {
+  border: 1px solid #ff0000;
+}
+
+section#contacto #form form input:focus,
+section#contacto #form form textarea:focus {
+  border-color: #1B4136;
+  outline: none;
+}
+
 /* GLOBALS */
 * {
   font-family: "Acherus Grotesque";
@@ -55,7 +66,7 @@ a.wa {
   position: fixed;
   right: 15px;
   bottom: 15px;
-  transition: 0.1s ease-in;
+  transition: 0.5s ease;
   z-index: 1;
 }
 a.wa:hover, a.wa:focus {
@@ -270,13 +281,88 @@ header {
   position: relative;
   width: 100%;
   height: 100vh;
-  z-index: 1;
-  /* TODO remove until header is done */
+  overflow-x: hidden;
+  z-index: 4;
 }
 @media (min-width: 768px) {
   header {
     max-height: 768px;
   }
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 45px;
+  height: 0;
+  background-color: #1B4136;
+  z-index: 4;
+}
+header nav.visible {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+}
+header nav.visible .toggler {
+  position: relative;
+  top: unset;
+  left: unset;
+}
+header nav .toggler {
+  position: fixed;
+  width: 22px;
+  height: 15px;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../../../src/assets/icons/icon-menu.svg);
+  outline: 3px solid transparent;
+  cursor: pointer;
+  z-index: 4;
+}
+@media (min-width: 768px) {
+  header nav .toggler {
+    display: none;
+  }
+}
+header nav .toggler.clicked {
+  background-image: url(../../../src/assets/icons/icon-x.svg);
+  width: 15px;
+  height: 22px;
+}
+header nav .toggler.scrolled {
+  background-color: #1B4136;
+  outline: 3px solid #1B4136;
+  left: calc(100% - 12px);
+  transform: translateX(-100%);
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  padding-left: 0;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  font-family: "Recoleta";
+  font-size: 1.8rem;
+  color: #EFEDEC;
+  text-align: center;
+  border-bottom: 1px solid #1B4136;
+}
+header nav ul li a:visited {
+  color: #EFEDEC;
+}
+header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus {
+  color: #EFEDEC;
+  border-bottom: 1px solid #EFEDEC;
 }
 header h1 {
   text-indent: 9999px;
@@ -298,24 +384,10 @@ header h1 {
     height: 200px;
   }
 }
-header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  pointer-events: none;
-  z-index: 2;
-}
-@media (min-width: 768px) {
-  header .overlay {
-    max-height: 768px;
-  }
-}
 header .slider {
   height: 100vh;
   z-index: 1;
+  overflow-x: hidden;
 }
 header .slider .bxslider li::after {
   content: "";
@@ -795,7 +867,7 @@ section#contacto #form {
     padding: 120px 45px;
   }
 }
-section#contacto #form h2 {
+section#contacto #form h3 {
   font-family: "Recoleta";
   font-size: 2.2rem;
   text-align: center;
@@ -803,7 +875,7 @@ section#contacto #form h2 {
   margin-bottom: 45px;
 }
 @media (min-width: 768px) {
-  section#contacto #form h2 {
+  section#contacto #form h3 {
     font-size: 3rem;
   }
 }
@@ -864,6 +936,12 @@ section#contacto #form form button {
   section#contacto #form form button {
     margin-top: 45px;
   }
+}
+section#contacto #form .response {
+  display: none;
+  font-family: "Recoleta";
+  font-size: 2rem;
+  text-align: center;
 }
 
 /* FOOTER */

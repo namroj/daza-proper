@@ -73,7 +73,7 @@ section#contacto
     +lg
       padding: 120px 45px
 
-    h2
+    h3
       font-family: 'Recoleta'
       font-size: 2.2rem
       text-align: center
@@ -109,6 +109,12 @@ section#contacto
           color: $dark-color
           opacity: 1
 
+        &:focus
+          @extend %focus
+
+        &.error
+          @extend %error
+
         +md
           padding: 10px
 
@@ -121,8 +127,17 @@ section#contacto
       textarea
         resize: none
 
+        &.error
+          @extend %error
+
       button
         margin-top: 40px
 
         +md
           margin-top: 45px
+
+    .response
+      display: none
+      font-family: 'Recoleta'
+      font-size: 2rem
+      text-align: center

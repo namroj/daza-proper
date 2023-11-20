@@ -12,6 +12,7 @@
   <link rel="manifest" href="./src/assets/icons/favicon/site.webmanifest">
   <link rel="mask-icon" href="./src/assets/icons/favicon/safari-pinned-tab.svg" color="#C8A98A">
   <meta name="msapplication-TileColor" content="#C8A98A">
+  <meta name="description" content="Proper | DAZA Real Estate">
   <!-- STYLES -->
   <link rel="stylesheet" href="./src/styles/css/main.css" />
 </head>
@@ -20,13 +21,26 @@
   <div id="loader">
     <div class="wall"></div>
     <div class="logo">
-      <img src="./src/assets/icons/logo.svg" alt="Proper - DAZA REAL ESTATE"
+      <img src="./src/assets/icons/logo.svg" alt="Proper - DAZA REAL ESTATE | Logo"
         class="animate__animated animate__fadeIn animated__slow" />
     </div>
   </div>
 
   <header>
-    <a href="/" title="Proper - DAZA REAL ESTATE">
+    <nav>
+      
+      <ul>
+        <div class="icon toggler"></div>
+        <li><a href="#proyecto">Proyecto</a></li>
+        <li><a href="#el-barrio">El Barrio</a></li>
+        <li><a href="#unidades">Unidades</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#empresa">Empresa</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <a rel="canonical" href="/" title="Proper - DAZA REAL ESTATE">
       <h1>Proper</h1>
     </a>
 
@@ -365,17 +379,20 @@
   <section id="contacto">
     <div class="container-fluid" id="form">
       <div class="row g-0">
-        <h2>Escribinos</h2>
         <form>
+          <h3>Escribinos</h3>
           <div class="full-name">
-            <input type="text" name="first-name" placeholder="Nombre" class="md-6" />
-            <input type="text" name="last-name" placeholder="Apellido" class="md-6" />
+            <input type="text" name="first_name" placeholder="Nombre" class="md-6" />
+            <input type="text" name="last_name" placeholder="Apellido" class="md-6" />
           </div>
           <input type="email" name="email" placeholder="Email" />
           <input type="tel" name="phone" placeholder="Teléfono" />
           <textarea name="query" rows="12" placeholder="Consulta"></textarea>
           <button type="submit">Enviar</button>
         </form>
+        <div class="response">
+          Consulta enviada con éxito
+        </div>
       </div>
     </div>
 
