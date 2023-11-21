@@ -58,8 +58,11 @@ const onScroll = () => {
 
 const buildMenu = () => {
   $('.toggler').on('click', function () {
-    $('nav').toggleClass('visible')
     $(this).toggleClass('clicked')
+    $('body').toggleClass('no-scroll')
+    $('nav').toggleClass('visible')
+    $('.wa').toggle()
+    $('footer').toggle()
 
     if ($('nav').hasClass('visible')) {
       $(this).removeClass('scrolled')
