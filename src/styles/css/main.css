@@ -424,7 +424,7 @@ header h1 {
 }
 header .slider {
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   z-index: 1;
 }
 @media (min-width: 768px) {
