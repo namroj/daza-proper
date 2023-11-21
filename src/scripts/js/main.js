@@ -11,7 +11,21 @@ let headerHeight
 const sm = 767
 const sliders = []
 
+const getWindowUpset = () => (screenWidth <= sm ? 0 : -99)
+
+const goToHash = () => {
+  const hashValue = window.location.hash
+  if (!hashValue) return
+
+  const section = $(hashValue)
+  $(window).scrollTo(section, 1000, {
+    offset: getWindowUpset()
+  })
+}
+
 const onScroll = () => {
+  const navHeight = $('nav').height()
+  const scrollPosition = $(document).scrollTop() + navHeight
   headerHeight = $('header').height()
 
   if (screenWidth <= sm) {
@@ -19,6 +33,27 @@ const onScroll = () => {
       ? $('nav:not(.visible) .toggler').addClass('scrolled')
       : $('.toggler').removeClass('scrolled')
   }
+
+  $('nav ul li a').each(function () {
+    const href = $(this).attr('href')
+    if (!href) {
+      return
+    }
+
+    const section = $(this).attr('href')
+    const refElement = $(section)
+
+    if (
+      refElement.position().top <= scrollPosition &&
+      refElement.position().top + refElement.height() > scrollPosition
+    ) {
+      $('nav ul li a').removeClass('active')
+      $(this).addClass('active')
+      return
+    }
+
+    $(this).removeClass('active')
+  })
 }
 
 const buildMenu = () => {
@@ -39,11 +74,28 @@ const buildMenu = () => {
     }
   })
 
-  $('nav li a').on('click', function () {
+  $('nav ul li a, .go-to').on('touchstart click', function () {
     if (screenWidth <= sm) {
-      $('nav').toggleClass('visible')
-      $('.toggler').toggleClass('clicked')
+      setTimeout(function () {
+        $('.btn-menu-close').trigger('click')
+      }, 250)
     }
+
+    const section = $($(this).attr('href'))
+    if (!section) {
+      return
+    }
+
+    if (screenWidth <= sm) {
+      $(window).scrollTo(section, 1000, {
+        offset: 0
+      })
+      return
+    }
+
+    $(window).scrollTo(section, 1000, {
+      offset: getWindowUpset()
+    })
   })
 }
 
@@ -193,6 +245,7 @@ const setCurrentYear = () => {
 
 $(function () {
   $(document).on('scroll', onScroll)
+  goToHash()
   buildMenu()
   buildForm()
   setCurrentYear()
@@ -203,6 +256,7 @@ $(window).on('resize', () => {
     screenWidth = window.innerWidth > 0 ? window.innerWidth : screen.width
     if (screenWidth <= sm) {
       $('nav').removeClass('scrolled')
+      $('nav').removeClass('visible')
     }
   }, 500)
 
