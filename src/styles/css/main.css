@@ -990,8 +990,13 @@ section#contacto #form form button {
 section#contacto #form .response {
   display: none;
   font-family: "Recoleta";
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  section#contacto #form .response {
+    font-size: 2rem;
+  }
 }
 
 /* FOOTER */

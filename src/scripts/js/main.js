@@ -198,41 +198,31 @@ const buildForm = () => {
       const lastName = $('form [name="last_name"]').val()
       const email = $('form [name="email"]').val()
       const phone = $('form [name="phone"]').val()
-      const query = $('form [name="query"]').val()
+      const message = $('form [name="message"]').val()
 
-      const data = `first_name=${firstName}&last_name=${lastName}&email=${email}&phone=${phone}$query=${query}`
+      const data = `first_name=${firstName}&last_name=${lastName}&email=${email}&phone=${phone}&message=${message}`
 
       $.ajax({
         type: 'POST',
-        url: `http://127.0.0.1:5500/mailing`,
+        url: `https://dazarealestate.com/proper/src/scripts/php/mailing.php`,
         data: data,
         dataType: 'json',
         success: function (response) {
-          if (response.status != 'OK') {
-            $('.response').html(response.msg).show().animate(
-              {
-                opacity: 1
-              },
-              500
-            )
-            $('form button').text('Enviar')
-          } else {
+          const { status, msg } = response
+
+          $('form').hide()
+          $('.response').show()
+          $('.response').text(msg)
+
+          if (status === 'OK') {
             $('form')[0].reset()
-            $('form button').text('Enviar')
-            $('.response').html(response.msg).animate(
-              {
-                opacity: '1'
-              },
-              500
-            )
-            setTimeout(function () {
-              $('.response').html(response.msg).css('opacity', 0)
-            }, 4000)
           }
 
           setTimeout(function () {
             $('form button').text('Enviar')
-            $('.response').css('opacity', 0)
+            $('.response').text('')
+            $('.response').hide()
+            $('form').show()
           }, 4000)
         }
       })
