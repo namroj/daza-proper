@@ -204,7 +204,7 @@ const buildForm = () => {
 
       $.ajax({
         type: 'POST',
-        url: `https://dazarealestate.com/proper/src/scripts/php/mailing.php`,
+        url: `https://dazarealestate.com/proper-test/src/scripts/php/mailing.php`,
         data: data,
         dataType: 'json',
         success: function (response) {

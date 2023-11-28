@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $body .= "Teléfono: $phone\n";
   $body .= "Consulta: $message\n";
 
-  $to = "info@dazarealestate.com";
+  $to = "luciano.cicchino@gmail.com";
   $subject = "[DAZA Real Estate] Proper - Consulta <$email>";
   $headers = "From: info@dazarealestate.com\r\nReply-To: $email\r\n";
 

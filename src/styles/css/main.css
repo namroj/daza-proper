@@ -400,6 +400,7 @@ header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus {
 @media (min-width: 768px) {
   header nav ul li a.active, header nav ul li a:hover, header nav ul li a:focus {
     color: #1B4136;
+    border-bottom: 1px solid #1B4136;
   }
 }
 header h1 {
