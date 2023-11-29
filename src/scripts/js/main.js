@@ -119,7 +119,7 @@ const buildSlider = (config) => {
     keyboardEnabled: true,
     mode: 'horizontal',
     pager: true,
-    pause: 4000,
+    pause: 5000,
     responsive: true,
     speed: 1000,
     onSliderLoad: (currentIndex) => {
