@@ -900,9 +900,11 @@ section#contacto .data .info .rrhh a:first-of-type {
 }
 section#contacto .data .info .rrhh a.ig {
   background-image: url(../../../src/assets/icons/icon-ig.svg);
+  visibility: hidden;
 }
 section#contacto .data .info .rrhh a.ln {
   background-image: url(../../../src/assets/icons/icon-ln.svg);
+  visibility: hidden;
 }
 section#contacto #form {
   background-color: #EFEDEC;
@@ -1073,6 +1075,7 @@ footer .info a.address:hover, footer .info a.address:focus, footer .info a.addre
 footer a.ig {
   background-image: url(../../../src/assets/icons/icon-ig-light.svg);
   margin: 35px auto 70px;
+  visibility: hidden;
 }
 @media (min-width: 768px) {
   footer a.ig {
