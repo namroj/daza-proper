@@ -93,6 +93,10 @@ const buildMenu = () => {
       $(window).scrollTo(section, 1000, {
         offset: 0
       })
+      setTimeout(() => {
+        $('nav').removeClass('visible')
+        $('.toggler').toggleClass('clicked')
+      }, 500)
       return
     }
 
