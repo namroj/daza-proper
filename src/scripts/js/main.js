@@ -137,37 +137,59 @@ const buildSlider = (config) => {
   })
 }
 
-const generateSliders = () => {
-  $('.bxslider li').each(function (i) {
-    $(this).backstretch($(this).attr('data-bg'))
-  })
+// Function to initialize Backstretch slider lazily
+const lazyLoadSlider = (slider) => {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Initialize Backstretch when the slider is in the viewport
+        $(entry.target).backstretch($(entry.target).attr('data-bg'));
+        observer.unobserve(entry.target); // Stop observing once initialized
+      }
+    });
+  });
 
+  observer.observe(slider[0]); // Observe the first element in the slider list
+};
+
+const generateSliders = () => {
+  // Lazy load the bxslider images
+  $('.bxslider li').each(function () {
+    // Add a data attribute to store the background image URL
+    const $slider = $(this);
+    $slider.attr('data-bg', $slider.find('img').attr('src'));
+
+    // Lazy load the slider
+    lazyLoadSlider($slider);
+  });
+
+  // Create other sliders (assuming buildSlider is defined)
   const headerSmSlider = buildSlider({
     container: 'header',
     device: 'sm',
-    isCaptionEnabled: false
-  })
+    isCaptionEnabled: false,
+  });
 
   const headerMdSlider = buildSlider({
     container: 'header',
     device: 'md',
-    isCaptionEnabled: false
-  })
+    isCaptionEnabled: false,
+  });
 
   const unitsSmSlider = buildSlider({
     container: '#unidades',
     device: 'sm',
-    isCaptionEnabled: true
-  })
+    isCaptionEnabled: true,
+  });
 
   const unitsMdSlider = buildSlider({
     container: '#unidades',
     device: 'md',
-    isCaptionEnabled: true
-  })
+    isCaptionEnabled: true,
+  });
 
-  sliders.push(headerSmSlider, headerMdSlider, unitsSmSlider, unitsMdSlider)
-}
+  sliders.push(headerSmSlider, headerMdSlider, unitsSmSlider, unitsMdSlider);
+};
 
 const buildForm = () => {
   $('form').validate({
